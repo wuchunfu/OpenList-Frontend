@@ -66,6 +66,12 @@ const previews: Preview[] = [
     prior: true,
   },
   {
+    name: "HEIC",
+    exts: ["heic", "heif", "avif", "vvc", "avc", "jpeg", "jpg"],
+    component: lazy(() => import("./heic")),
+    prior: true,
+  },
+  {
     name: "Markdown with word wrap",
     type: ObjType.TEXT,
     component: lazy(() => import("./markdown_with_word_wrap")),
