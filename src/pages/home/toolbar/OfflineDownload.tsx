@@ -64,7 +64,6 @@ export const OfflineDownload = () => {
   onMount(async () => {
     const resp = await reqTool()
     handleResp(resp, (data) => {
-      data.push("115 Cloud")
       setTools(data)
       setTool(data[0])
     })
