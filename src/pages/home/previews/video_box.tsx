@@ -94,7 +94,12 @@ export const players: {
     scheme: "iplay://play/any?type=url&url=$bdurl",
     platforms: ["iOS"],
   },
-  { icon: "mpv", name: "mpv", scheme: "mpv://$edurl", platforms: ["Windows", "MacOS", "Linux", "Android"] },
+  {
+    icon: "mpv",
+    name: "mpv",
+    scheme: "mpv://$edurl",
+    platforms: ["Windows", "MacOS", "Linux", "Android"],
+  },
 ]
 
 export const AutoHeightPlugin = (player: Artplayer) => {
@@ -201,7 +206,10 @@ export const VideoBox = (props: {
           onClick={() => {
             const newShowAll = !showAll()
             setShowAll(newShowAll)
-            localStorage.setItem("video_show_all_players", newShowAll.toString())
+            localStorage.setItem(
+              "video_show_all_players",
+              newShowAll.toString(),
+            )
           }}
           icon={
             <Icon
